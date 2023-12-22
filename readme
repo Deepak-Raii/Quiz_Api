@@ -8,10 +8,12 @@ Below is a detailed guide on how to use each endpoint.
 
 
 
-Install required packages : express, mongoose, jsonwebtoken, bcrypt
+Install required packages : express, mongoose, dotenv, jsonwebtoken, bcrypt
+
 
 
 *****************  Quiz Api  *******************
+
 1. Create a New Quiz
 endPoint : POST http://localhost:3001/quizzes
 Description : 
@@ -20,11 +22,11 @@ Create a new quiz with the provided question, options, right answer, start date,
 Request Method: POST
 Body:
 {
-  "question": "Question1",      (String)
+  "question": "Question1",                                       (String)
   "options": ["Option 1", "Option 2", "Option 3", "Option 4"],   (Array)
-  "rightAnswer": 0,      (Number)
-  "startDate": "2023/12/21",  (follow this format)     (Date)
-  "endDate": "2023/12/25",  (follow this format)       (Date)
+  "rightAnswer": 0,                                              (Number)
+  "startDate": "2023/12/21",  (follow this format)               (Date)
+  "endDate": "2023/12/25",  (follow this format)                 (Date)
 }
 
 
