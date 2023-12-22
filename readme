@@ -1,0 +1,90 @@
+Hi, My name is Deepak Rai.
+
+Welcome to the Quiz API! This API allows you to manage quizzes including,
+creating new quizzes,
+retrieving active quizzes,
+fetching all quizzes, and finding quiz results using unique id of quiz.
+Below is a detailed guide on how to use each endpoint.
+
+
+
+Install required packages : express, mongoose, jsonwebtoken, bcrypt
+
+
+*****************  Quiz Api  *******************
+1. Create a New Quiz
+endPoint : POST http://localhost:3001/quizzes
+Description : 
+Create a new quiz with the provided question, options, right answer, start date, and end date.
+
+Request Method: POST
+Body:
+{
+  "question": "Question1",      (String)
+  "options": ["Option 1", "Option 2", "Option 3", "Option 4"],   (Array)
+  "rightAnswer": 0,      (Number)
+  "startDate": "2023/12/21",  (follow this format)     (Date)
+  "endDate": "2023/12/25",  (follow this format)       (Date)
+}
+
+
+2. Get Active Quizzes
+endPoint : GET http://localhost:3001/quizzes/active
+Description : 
+Retrieve the list of active quizzes based on the current date.
+
+Request Method: GET
+here, i will take current date for get all the active quiz
+
+
+3. Get All Quizzes
+endPoint : GET http://localhost:3001/quizzes/all
+Description : 
+Retrieve the list of all quizzes available in database.
+
+Request Method: GET
+
+
+4. Get Quiz Results
+endPoint : GET http://localhost:3001/quizzes/:id/result
+Description : 
+Retrieve the correct answer and additional information for a specific quiz.
+
+Request
+Method: GET
+Params: Replace :id with the unique ID of the quiz.
+
+
+
+
+***************** User Authentication Api ****************
+
+
+
+1. Create a New User Account
+endPoint : POST http://localhost:3001/createUser
+Description : 
+Create a new user account with a unique username, email, and password.
+
+Request Method: POST
+Body:
+{
+  "username": "deepakrai",               (String)
+  "email": "abc@gmail.com",              (String)
+  "password": "abc@xyz"                  (String)
+}
+
+
+
+
+2. User Login
+endPoint : POST http://localhost:3001/login
+Description : 
+Authenticate a user through login and receive a JSON Web Token (JWT) for authorization.
+
+Request Method: POST
+Body:
+{
+  "email": "abc@gmail.com",           (String)
+  "password": "abc@xyz"               (String)
+}
